@@ -2,3 +2,7 @@ venv/
 __pycache__/
 .ipynb_checkpoints/
 *.csv
+accounts_anonymized.json
+support_cases_anonymized.json
+generate_context_summary.sh
+project_context_summary.txt
