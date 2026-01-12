@@ -1,3 +1,5 @@
+> 🇧🇷 [Leia este documento em Português](README.pt-br.md)
+
 # GlobalVision Systems & Data Intern - Take Home Challenge
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
@@ -5,22 +7,22 @@
 [![SQLite](https://img.shields.io/badge/SQLite-3-orange.svg)](https://www.sqlite.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 📋 Sobre o Projeto
+## 📋 About the Project
 
-Este projeto apresenta uma análise completa de dados de **Accounts** e **Support Cases** extraídos do Salesforce da GlobalVision. O objetivo é processar, transformar e visualizar dados para gerar insights acionáveis que suportem decisões de negócio estratégicas.
-
----
-
-## 🎯 Objetivos do Desafio
-
-1. **Exploração de Dados**: Compreender a estrutura e qualidade dos datasets
-2. **Processamento SQL**: Utilizar SQL dentro do Python para transformações e agregações
-3. **Visualizações**: Criar gráficos que comuniquem insights de forma clara
-4. **Business Intelligence**: Propor recomendações baseadas em evidências quantitativas
+This project presents a comprehensive analysis of **Accounts** and **Support Cases** data extracted from GlobalVision's Salesforce. The goal is to process, transform, and visualize data to generate actionable insights that support strategic business decisions.
 
 ---
 
-## 📂 Estrutura do Projeto
+## 🎯 Challenge Objectives
+
+1.  **Data Exploration**: Understand the structure and quality of the datasets.
+2.  **SQL Processing**: Use SQL within Python for transformations and aggregations.
+3.  **Visualizations**: Create charts that communicate insights clearly.
+4.  **Business Intelligence**: Propose recommendations based on quantitative evidence.
+
+---
+
+## 📂 Project Structure
 
 ```
 globalvision-data-analysis/
@@ -31,8 +33,8 @@ globalvision-data-analysis/
 │       └── support_cases_anonymized.json
 │
 ├── notebooks/
-│   ├── analysis_walkthrough.ipynb # Notebook principal (Análise Interativa)
-│   └── analysis_walkthrough.py # Script Python (Versão executável)
+│   ├── analysis_walkthrough.ipynb # Main Notebook (Interactive Analysis)
+│   └── analysis_walkthrough.py    # Python Script (Executable Version)
 ├── output/
 │   └── figures/
 │       ├── 01_volume_por_industria.png
@@ -47,21 +49,21 @@ globalvision-data-analysis/
 
 ---
 
-## 🚀 Como Executar
+## 🚀 How to Run
 
-### Pré-requisitos
+### Prerequisites
 
-- Python 3.8 ou superior
+- Python 3.8 or higher
 
-### Instalação
+### Installation
 
-1. **Clone o repositório** (ou extraia os arquivos do projeto)
+1.  **Clone the repository** (or extract the project files)
 
 ```bash
 cd globalvision-data-analysis
 ```
 
-2. **Crie um ambiente virtual** (recomendado)
+2.  **Create a virtual environment** (recommended)
 
 ```bash
 # Windows
@@ -73,25 +75,25 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-3. **Instale as dependências**
+3.  **Install dependencies**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Executando a Análise
+### Running the Analysis
 
-**Opção 1: Jupyter Notebook (Recomendado)**
+**Option 1: Jupyter Notebook (Recommended)**
 
 ```bash
 jupyter notebook notebooks/analysis_walkthrough.ipynb
 ```
 
-Execute todas as células sequencialmente (Menu: Cell > Run All)
+Execute all cells sequentially (Menu: Cell > Run All).
 
-**Opção 2: Python Script**
+**Option 2: Python Script**
 
-Se preferir rodar como script Python:
+If you prefer to run it as a Python script:
 
 ```bash
 python notebooks/analysis_walkthrough.py
@@ -99,112 +101,112 @@ python notebooks/analysis_walkthrough.py
 
 ---
 
-## 📊 Datasets Utilizados
+## 📊 Datasets Used
 
 ### 1. `accounts_anonymized.json`
-- **Registros**: 1.415 contas
-- **Período**: Nov/2007 - Jan/2025
-- **Campos-chave**: `account_sfid`, `account_name`, `account_industry`, `account_country`
+-   **Records**: 1,415 accounts
+-   **Period**: Nov/2007 - Jan/2025
+-   **Key Fields**: `account_sfid`, `account_name`, `account_industry`, `account_country`
 
 ### 2. `support_cases_anonymized.json`
-- **Registros**: 10.000 casos de suporte
-- **Período**: Nov/2023 - Jan/2025
-- **Campos-chave**: `case_sfid`, `account_sfid`, `case_status`, `case_priority`, `case_severity`
+-   **Records**: 10,000 support cases
+-   **Period**: Nov/2023 - Jan/2025
+-   **Key Fields**: `case_sfid`, `account_sfid`, `case_status`, `case_priority`, `case_severity`
 
 ---
 
-## 🔍 KPIs Desenvolvidos
+## 🔍 Developed KPIs
 
-### KPI 1: Performance por Indústria
-- Volume total de casos por setor
-- Tempo médio de resolução
-- Percentual de casos críticos (High + Urgent)
+### KPI 1: Industry Performance
+-   Total case volume by sector
+-   Average resolution time (MTTR)
+-   Percentage of critical cases (High + Urgent)
 
-### KPI 2: Análise de Status
-- Distribuição de casos por status (Closed, New, Working, etc.)
-- Backlog atual (casos abertos)
-- Eficiência de resolução
+### KPI 2: Status Analysis
+-   Case distribution by status (Closed, New, Working, etc.)
+-   Current backlog (open cases)
+-   Resolution efficiency
 
 ### KPI 3: High-Touch Accounts
-- Identificação de contas com alto volume de tickets
-- Análise de criticidade por cliente
-- Priorização de atendimento VIP
+-   Identification of accounts with high ticket volume
+-   Criticality analysis by client
+-   VIP service prioritization
 
-### KPI 4: Tendências Temporais
-- Evolução mensal de casos criados vs. fechados
-- Variação do tempo médio de resolução
-- Sazonalidade e padrões de demanda
-
----
-
-## 📈 Principais Visualizações
-
-| Gráfico | Descrição | Insight-Chave |
-|---------|-----------|---------------|
-| **Volume por Indústria** | Barras horizontais mostrando top 10 setores | Pharmaceuticals e IT dominam 45% dos casos |
-| **Tempo de Resolução** | Comparação de eficiência entre indústrias | Setor "None" tem 23 dias de MTTR (outlier) |
-| **Distribuição de Status** | Pizza com % de casos Closed/Open/Duplicate | 70.4% de taxa de fechamento |
-| **Tendência Temporal** | Linha dupla (Volume + Eficiência) | Volume de entrada supera fechamento (Backlog crescente) |
-| **Matriz de Prioridade** | Heatmap Prioridade vs. Status | Categoria "High" quase não é utilizada |
+### KPI 4: Temporal Trends
+-   Monthly evolution of created vs. closed cases
+-   Variation in average resolution time
+-   Seasonality and demand patterns
 
 ---
 
-## 💡 Insights de Negócio
+## 📈 Key Visualizations
 
-### 🎯 Insight 1: Risco de Concentração ("The Whale Client")
-
-**Problema Identificado:**
-- **Cliente Outlier:** O cliente `Customer_900e52a5` (IT) representa **16.5%** de todos os casos.
-- **Volume:** 1.650 tickets (7x maior que o 2º colocado).
-- **Risco:** Backlog atual de 93 casos ativos, indicando potencial insatisfação/churn.
-
-**Recomendação Estratégica:**
-- ✅ Implementar atendimento **White Glove** com Technical Account Manager (TAM) dedicado.
-- ✅ Investigar histórico de tickets para criar automação/self-service específico.
-- ✅ **Meta:** Reduzir volume de tickets deste cliente em 20% em 3 meses.
+| Chart | Description | Key Insight |
+| :--- | :--- | :--- |
+| **Volume by Industry** | Horizontal bars showing top 10 sectors | Pharmaceuticals and IT dominate 45% of cases |
+| **Resolution Time** | Efficiency comparison between industries | "None" sector has a 23-day MTTR (outlier) |
+| **Status Distribution** | Pie chart with Closed/Open/Duplicate % | 70.4% closure rate |
+| **Temporal Trend** | Double line chart (Volume + Efficiency) | Inflow volume exceeds outflow (Growing Backlog) |
+| **Priority Matrix** | Priority vs. Status Heatmap | "High" category is almost never used |
 
 ---
 
-### 🎯 Insight 2: Ineficiência Operacional (Duplicatas e Priorização)
+## 💡 Business Insights
 
-**Problema Identificado:**
-- **20.2% de Desperdício:** 2.015 casos são duplicatas, consumindo tempo precioso de triagem.
-- **Priorização Quebrada:** Apenas 2 casos "High" em todo histórico. A triagem é binária: "Normal" ou "Urgent".
-- **Gargalo:** Casos novos ("New") têm idade média de 159 dias no backlog.
+### 🎯 Insight 1: Concentration Risk ("The Whale Client")
 
-**Recomendação Estratégica:**
-- ✅ Implementar validação de duplicidade no Front-End (UX).
-- ✅ Eliminar categoria "High" OU redefinir critérios claros de SLA.
-- ✅ **Meta:** Reduzir duplicatas para <5% e limpar o backlog antigo.
+**Identified Problem:**
+-   **Outlier Client:** Client `Customer_900e52a5` (IT) represents **16.5%** of all cases.
+-   **Volume:** 1,650 tickets (7x higher than the 2nd place).
+-   **Risk:** Current backlog of 93 active cases, indicating potential dissatisfaction/churn.
 
----
-
-### 🎯 Insight 3: Dados Órfãos & Hegemonia Farmacêutica
-
-**Problema Identificado:**
-- **Blind Spot:** **1.593 casos** (15.9%) sem vínculo com Account (orphan data).
-- **Impacto:** Impossibilita análise de receita e ROI do suporte ("voo às cegas").
-- **Setor Crítico:** Pharmaceuticals representa 7 das top 15 contas por volume.
-
-**Recomendação Estratégica:**
-- ✅ **Curto Prazo:** Força-tarefa (ETL) para recuperar linkagem de casos órfãos.
-- ✅ **Médio Prazo:** Criar Squad Especializada em Life Sciences/Pharma.
-- ✅ **Meta:** Taxa de dados órfãos < 1% e aumentar CSAT do setor Pharma.
+**Strategic Recommendation:**
+-   ✅ Implement **White Glove** service with a dedicated Technical Account Manager (TAM).
+-   ✅ Investigate ticket history to create specific automation/self-service.
+-   ✅ **Goal:** Reduce ticket volume from this client by 20% in 3 months.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+### 🎯 Insight 2: Operational Inefficiency (Duplicates and Prioritization)
 
-- **Python 3.8+**: Linguagem principal
-- **Pandas**: Manipulação e análise de dados
-- **SQLite3**: Database in-memory para queries SQL
-- **Matplotlib & Seaborn**: Visualizações estáticas
-- **NumPy**: Operações numéricas
-- **Jupyter Notebook**: Ambiente interativo de desenvolvimento
+**Identified Problem:**
+-   **20.2% Waste:** 2,015 cases are duplicates, consuming precious triage time.
+-   **Broken Prioritization:** Only 2 "High" cases in the entire history. Triage is binary: "Normal" or "Urgent".
+-   **Bottleneck:** New cases ("New") have an average age of 159 days in the backlog.
+
+**Strategic Recommendation:**
+-   ✅ Implement duplicate validation on the Front-End (UX).
+-   ✅ Eliminate the "High" category OR redefine clear SLA criteria.
+-   ✅ **Goal:** Reduce duplicates to <5% and clear the old backlog.
 
 ---
 
-## 📦 Dependências (requirements.txt)
+### 🎯 Insight 3: Orphan Data & Pharmaceutical Dominance
+
+**Identified Problem:**
+-   **Blind Spot:** **1,593 cases** (15.9%) have no link to an Account (orphan data).
+-   **Impact:** Impossible to analyze revenue and ROI for support ("flying blind").
+-   **Critical Sector:** Pharmaceuticals represents 7 of the top 15 accounts by volume.
+
+**Strategic Recommendation:**
+-   ✅ **Short Term:** Task Force (ETL) to recover orphan case linkage.
+-   ✅ **Medium Term:** Create a Specialized Squad for Life Sciences/Pharma.
+-   ✅ **Goal:** Orphan data rate < 1% and increase CSAT for the Pharma sector.
+
+---
+
+## 🛠️ Technologies Used
+
+-   **Python 3.8+**: Main language
+-   **Pandas**: Data manipulation and analysis
+-   **SQLite3**: In-memory database for SQL queries
+-   **Matplotlib & Seaborn**: Static visualizations
+-   **NumPy**: Numerical operations
+-   **Jupyter Notebook**: Interactive development environment
+
+---
+
+## 📦 Dependencies (requirements.txt)
 
 ```txt
 pandas>=2.0.0
@@ -216,51 +218,51 @@ jupyter>=1.0.0
 
 ---
 
-## 👤 Autor
+## 👤 Author
 
 **Alex Oliveira Mendes**
 
-📧 Email: [Alex_vips2@hotmail.com]  
-💼 LinkedIn: [https://www.linkedin.com/in/alex-mendes-80244b292]  
+📧 Email: [Alex_vips2@hotmail.com]
+💼 LinkedIn: [https://www.linkedin.com/in/alex-mendes-80244b292]
 
 ---
 
-## 📝 Notas de Desenvolvimento
+## 📝 Development Notes
 
-### Desafios Encontrados
-1. **Integridade de Dados**: 15.9% dos casos sem `account_sfid` válido
-2. **Qualidade de Dados**: Categoria "High" praticamente não utilizada
-3. **Outliers**: Cliente único representando 16% do volume total
+### Challenges Faced
+1.  **Data Integrity**: 15.9% of cases without a valid `account_sfid`.
+2.  **Data Quality**: "High" category practically unused.
+3.  **Outliers**: A single client representing 16% of total volume.
 
-### Decisões Técnicas
-- Criação de conta "UNKNOWN_ACCOUNT" para preservar casos órfãos na análise
-- Uso de SQLite in-memory para demonstrar proficiência SQL sem setup externo
-- Foco em visualizações exportáveis (PNG 300dpi) para apresentações executivas
-
----
-
-## 🎓 Aprendizados
-
-- Processamento de dados JSON em escala
-- Queries SQL complexas com agregações e JOINs
-- Data storytelling através de visualizações
-- Tradução de insights técnicos em recomendações de negócio
+### Technical Decisions
+-   Creation of an "UNKNOWN_ACCOUNT" to preserve orphan cases in the analysis.
+-   Use of in-memory SQLite to demonstrate SQL proficiency without external setup.
+-   Focus on exportable visualizations (300dpi PNG) for executive presentations.
 
 ---
 
-## 📄 Licença
+## 🎓 Key Takeaways
 
-Este projeto foi desenvolvido como parte de um processo seletivo para GlobalVision.  
-Código disponível sob licença MIT para fins educacionais.
-
----
-
-## 🙏 Agradecimentos
-
-Agradeço à equipe da GlobalVision pela oportunidade de demonstrar minhas habilidades técnicas e analíticas através deste desafio estimulante!
+-   JSON data processing at scale.
+-   Complex SQL queries with aggregations and JOINs.
+-   Data storytelling through visualizations.
+-   Translating technical insights into business recommendations.
 
 ---
 
-**Data de Submissão**: Janeiro 2026  
-**Tempo de Desenvolvimento**: 1 semana  
-**Status**: ✅ Completo e Pronto para Apresentação
+## 📄 License
+
+This project was developed as part of a selection process for GlobalVision.
+Code available under MIT license for educational purposes.
+
+---
+
+## 🙏 Acknowledgments
+
+I would like to thank the GlobalVision team for the opportunity to demonstrate my technical and analytical skills through this stimulating challenge!
+
+---
+
+**Submission Date**: January 2026
+**Development Time**: 1 week
+**Status**: ✅ Complete and Ready for Presentation
