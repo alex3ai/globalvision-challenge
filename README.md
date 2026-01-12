@@ -154,42 +154,42 @@ python notebooks/analysis_walkthrough.py
 ### 🎯 Insight 1: Risco de Concentração ("The Whale Client")
 
 **Problema Identificado:**
-- Cliente `Customer_900e52a5` (IT) representa **16.5%** de todos os casos.
-- Volume: 1.650 tickets (7x maior que o 2º colocado).
-- Backlog atual: 93 casos ativos, risco de insatisfação.
+- **Cliente Outlier:** O cliente `Customer_900e52a5` (IT) representa **16.5%** de todos os casos.
+- **Volume:** 1.650 tickets (7x maior que o 2º colocado).
+- **Risco:** Backlog atual de 93 casos ativos, indicando potencial insatisfação/churn.
 
-**Recomendação:**
-✅ Implementar atendimento **White Glove** com Technical Account Manager (TAM).
-✅ Investigar tickets para automação/self-service.
-✅ **Meta**: Reduzir volume de tickets deste cliente em 20% em 3 meses.
+**Recomendação Estratégica:**
+- ✅ Implementar atendimento **White Glove** com Technical Account Manager (TAM) dedicado.
+- ✅ Investigar histórico de tickets para criar automação/self-service específico.
+- ✅ **Meta:** Reduzir volume de tickets deste cliente em 20% em 3 meses.
 
 ---
 
 ### 🎯 Insight 2: Ineficiência Operacional (Duplicatas e Priorização)
 
 **Problema Identificado:**
-- **20.2% de Desperdício:** 2.015 casos são duplicatas, consumindo tempo de triagem.
-- **Priorização Quebrada:** Apenas 2 casos "High" em todo histórico. Ou é "Normal" ou salta para "Urgent".
-- **Gargalo:** Casos "New" têm idade média de 159 dias.
+- **20.2% de Desperdício:** 2.015 casos são duplicatas, consumindo tempo precioso de triagem.
+- **Priorização Quebrada:** Apenas 2 casos "High" em todo histórico. A triagem é binária: "Normal" ou "Urgent".
+- **Gargalo:** Casos novos ("New") têm idade média de 159 dias no backlog.
 
-**Recomendação:**
-✅ Implementar validação de duplicidade no Front-End.
-✅ Eliminar categoria "High" OU redefinir critérios de SLA.
-✅ **Meta**: Reduzir duplicatas para <5% e limpar backlog antigo.
+**Recomendação Estratégica:**
+- ✅ Implementar validação de duplicidade no Front-End (UX).
+- ✅ Eliminar categoria "High" OU redefinir critérios claros de SLA.
+- ✅ **Meta:** Reduzir duplicatas para <5% e limpar o backlog antigo.
 
 ---
 
 ### 🎯 Insight 3: Dados Órfãos & Hegemonia Farmacêutica
 
 **Problema Identificado:**
-- **1.593 casos** (15.9%) sem vínculo com Account (orphan data).
-- Impossibilita análise de receita e ROI do suporte ("voo às cegas").
-- Pharmaceuticals: 7 das top 15 contas por volume.
+- **Blind Spot:** **1.593 casos** (15.9%) sem vínculo com Account (orphan data).
+- **Impacto:** Impossibilita análise de receita e ROI do suporte ("voo às cegas").
+- **Setor Crítico:** Pharmaceuticals representa 7 das top 15 contas por volume.
 
-**Recomendação:**
-✅ **Curto Prazo**: Força-tarefa (ETL) para recuperar linkagem de casos órfãos.
-✅ **Médio Prazo**: Criar Squad Especializada em Life Sciences/Pharma.
-✅ **Meta**: Taxa de dados órfãos < 1% e aumentar CSAT do setor Pharma.
+**Recomendação Estratégica:**
+- ✅ **Curto Prazo:** Força-tarefa (ETL) para recuperar linkagem de casos órfãos.
+- ✅ **Médio Prazo:** Criar Squad Especializada em Life Sciences/Pharma.
+- ✅ **Meta:** Taxa de dados órfãos < 1% e aumentar CSAT do setor Pharma.
 
 ---
 
