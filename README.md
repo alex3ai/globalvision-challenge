@@ -222,8 +222,8 @@ jupyter>=1.0.0
 
 **Alex Oliveira Mendes**
 
-📧 Email: [Alex_vips2@hotmail.com]
-💼 LinkedIn: [https://www.linkedin.com/in/alex-mendes-80244b292]
+-📧 Email: [Alex_vips2@hotmail.com]
+-💼 LinkedIn: [https://www.linkedin.com/in/alex-mendes-80244b292]
 
 ---
 
